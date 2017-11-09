@@ -1,0 +1,31 @@
+<!--<p FundoAmarelo>
+  Texto com fundo amarelo 2
+</p>
+<button FundoAmarelo> BTN AMARELO</button>
+
+<p highlightMouse>
+  Texto com highligth passando o mouse
+</p>
+
+<p [highlight]="'pink'" [defaultColor]="'gray'" >
+  Texto com highligth passando o mouse
+</p>-->
+<h5>MOSTRAR CURSOS - COSTUMIZADO</h5>
+
+<div *ngIf="mostrarCursos" >
+  Lista de cursos.
+</div>
+
+<div *ngElse="mostrarCursos" >
+  Não existe cursos para listar.
+</div>
+<br><br>
+<button class="btn btn-primary" (click)="onMostrarCursos()">
+  Mostrar ou esconder cursos
+</button>
+
+<template [ngElse]="mostrarCursos" >
+  <div>
+    Não existe cursos para listar.
+  </div>
+</template>
